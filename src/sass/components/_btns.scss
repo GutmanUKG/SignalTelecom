@@ -1,0 +1,128 @@
+.link_hover{
+  font-family: 'Proxima Nova',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: navajowhite;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:after{
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    //background:url("../img/location.svg") center no-repeat;
+    border-radius: 50%;
+    transition: 0.5s all;
+    filter: invert(1);
+    position: absolute;
+    left:calc(100% + 20px);
+    transform: rotateY(0deg);
+  }
+  &:before{
+    content: '';
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: 0.5s all;
+    background: transparent;
+    left:calc(100% + 10px);
+    position: absolute;
+    transform: scale(0);
+  }
+  &:hover{
+    &:after{
+      filter: invert(0);
+      transform: rotateY(180deg);
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left:calc(100% + 10px);
+      background:#F4F3F6;
+      transition: 0.5s all;
+      transform: scale(1);
+    }
+  }
+  &_location{
+    &:after{
+      background:url("../img/location.svg") center no-repeat;
+    }
+  }
+  &_sing_in{
+    object{
+      position: absolute;
+      left:calc(100% + 20px);
+      filter: invert(1);
+      transform: rotateY(0deg);
+      transition: 0.5s all;
+    }
+    &:hover{
+      object{
+        filter: invert(0);
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+.btn_close{
+  display: flex;
+  outline: none;
+  border: none;
+  background: transparent;
+  align-items: center;
+  font-family: 'Proxima Nova',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  letter-spacing: 0.1em;
+  color: #7B7781;
+  position: absolute;
+  top: 71px;
+  right: 111px;
+  cursor: pointer;
+  transition: 0.5s all;
+  &:hover{
+    &:after{
+      transform: rotate(360deg);
+    }
+  }
+  &:after{
+    content: '';
+    transition: 0.5s all;
+    display: block;
+    background: url("../img/close_icon.svg") center no-repeat;
+    width: 24px;
+    height: 24px;
+    transform: rotate(0deg);
+    margin-left: 26px;
+  }
+}
+
+.btn_sing_in{
+  padding: 12px 24px;
+  box-sizing: border-box;
+  text-transform: none;
+  font-family: 'Proxima Nova',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: linear-gradient(90.47deg, #554596 0%, #C92C7B 100%);
+  border-radius: 8px;
+  min-width: 200px;
+  border: none;
+  outline: none;
+}

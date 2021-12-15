@@ -1,0 +1,50 @@
+@import "components/fonts";
+@import "components/header_menu";
+@import "src/sass/components/main_section";
+@import "components/btns";
+@import "components/section_slider";
+@import "components/popup";
+.container{
+  max-width: calc(100%);
+  margin: 0 auto;
+
+}
+.wrapper{
+  padding-left: 95px;
+  padding-right: 95px;
+  box-sizing: border-box;
+}
+.wrapper-flex{
+  display: flex;
+}
+
+.bg_blur{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  background: rgba(50, 34, 116, 0.25);
+  backdrop-filter: blur(10px);
+  display: none;
+}
+.active_poup{
+  overflow: hidden;
+  .bg_blur{
+    display: block;
+    z-index: 100;
+  }
+}
+
+.active_pop{
+  header{
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+.wrapper_slider{
+  height: 100%;
+}
