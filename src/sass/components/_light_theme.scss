@@ -1,0 +1,72 @@
+
+.light_section{
+  header{
+    .logo{
+      a{
+        .logo_light{
+          display: block;
+
+        }
+        .logo_dark{
+          display: none;
+        }
+      }
+    }
+    .main_menu{
+      ul{
+        li.active{
+          a{
+            color: #000000;
+          }
+        }
+        li{
+          a{
+            color: #7B7781;
+          }
+        }
+      }
+    }
+    .location{
+      a{
+        color: #7B7781;
+        &:after{
+          filter: opacity(0.5);
+        }
+
+      }
+    }
+    .lang{
+      .active{
+        color: #000000;
+      }
+    }
+    .sing_in{
+      a{
+        color: #7B7781;
+        object{
+          filter: opacity(0.5);
+        }
+      }
+
+    }
+  }
+  .container_copy{
+    .phone{
+      color: #7B7781;
+      img{
+        filter: brightness(0.5);
+      }
+    }
+    .toggle_next{
+      a{
+        color: #7B7781;
+      }
+      img{
+        filter: brightness(0.5);
+      }
+    }
+    .copy{
+      color: #7B7781;
+    }
+  }
+}

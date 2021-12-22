@@ -1,9 +1,23 @@
 @import "components/fonts";
+@import "components/containers";
 @import "components/header_menu";
 @import "src/sass/components/main_section";
 @import "components/btns";
 @import "components/section_slider";
 @import "components/popup";
+@import "components/info_section";
+@import "components/light_theme";
+@import "components/services";
+@import "components/distribution";
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+}
+body{
+  text-transform: capitalize;
+}
 .container{
   max-width: calc(100%);
   margin: 0 auto;

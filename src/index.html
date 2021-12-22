@@ -21,7 +21,8 @@
             <div class="wrapper-flex wrapper">
                 <div class="logo">
                     <a href="/">
-                        <img src="./img/logo.svg" alt="">
+                        <img src="./img/logo.svg" alt="" class="logo_dark">
+                        <img src="./img/logo_light.svg" alt="" class="logo_light">
                     </a>
                 </div>
                 <div class="main_menu">
@@ -47,6 +48,7 @@
                                     <div class="footer">
                                         <div class="phone">
                                             <a href="#">
+                                                <img src="./img/phone_icon.svg" alt="">
                                                 +7 (727) 357 33 33
                                             </a>
                                         </div>
@@ -131,6 +133,7 @@
                                     <div class="footer">
                                         <div class="phone">
                                             <a href="#">
+                                                <img src="./img/phone_icon.svg" alt="">
                                                 +7 (727) 357 33 33
                                             </a>
                                         </div>
@@ -157,6 +160,134 @@
                                 <a href="#">
                                     Контакты
                                 </a>
+                                <div class="menu_el_main menu_el contact">
+                                    <ul>
+                                        <li class="active_el list_link">
+                                            Нур-Султан
+                                            <div class="contact_txt">
+                                                <div class="title">
+                                                    Есть вопросы?
+                                                </div>
+                                                <div class="sub_title">
+                                                    Напишите нам
+                                                </div>
+
+                                                <div class="adress_block">
+                                                    <small>
+                                                        АДРЕС
+                                                    </small>
+                                                    <div class="txt">
+                                                        010000, Республика Казахстан, г. Нур-Султан,
+                                                        ул. Достык  16, Talan Towers, офис 605
+                                                    </div>
+                                                </div>
+
+                                                <div class="phones">
+                                                    <small>
+                                                        Телефоны
+                                                    </small>
+                                                    <a href="tel:">
+                                                        <span>
+                                                            Технический отдел:
+                                                        </span>
+                                                        +7 (705) 216 07 45
+                                                    </a>
+                                                    <a href="tel:">
+                                                        <span>
+                                                            Отдел продаж:
+                                                        </span>
+                                                        +7 (727) 382 22 22
+                                                    </a>
+                                                </div>
+                                                <div class="email">
+                                                    <small>
+                                                        электронная почта
+                                                    </small>
+                                                    <a href="mailto:">
+                                                        <span>
+                                                           Отдел поддержки:
+                                                        </span>
+                                                        support@signal.kz
+                                                    </a>
+                                                    <a href="tel:">
+                                                        <span>
+                                                           Отдел продаж:
+                                                        </span>
+                                                        sales@signal.kz
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list_link">
+                                            АЛМАТЫ
+                                            <div class="contact_txt">
+                                                <div class="title">
+                                                    Есть вопросы?
+                                                </div>
+                                                <div class="sub_title">
+                                                    Напишите нам
+                                                </div>
+
+                                                <div class="adress_block">
+                                                    <small>
+                                                        АДРЕС
+                                                    </small>
+                                                    <div class="txt">
+                                                        010000, Республика Казахстан, г. Нур-Султан,
+                                                        ул. Достык  16, Talan Towers, офис 605
+                                                    </div>
+                                                </div>
+
+                                                <div class="phones">
+                                                    <small>
+                                                        Телефоны
+                                                    </small>
+                                                    <a href="tel:">
+                                                        <span>
+                                                            Технический отдел:
+                                                        </span>
+                                                        +7 (705) 216 07 45
+                                                    </a>
+                                                    <a href="tel:">
+                                                        <span>
+                                                            Отдел продаж:
+                                                        </span>
+                                                        +7 (727) 382 22 22
+                                                    </a>
+                                                </div>
+                                                <div class="email">
+                                                    <small>
+                                                        электронная почта
+                                                    </small>
+                                                    <a href="mailto:">
+                                                        <span>
+                                                           Отдел поддержки:
+                                                        </span>
+                                                        support@signal.kz
+                                                    </a>
+                                                    <a href="tel:">
+                                                        <span>
+                                                           Отдел продаж:
+                                                        </span>
+                                                        sales@signal.kz
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <div class="footer">
+                                        <div class="phone">
+                                            <a href="#">
+                                                <img src="./img/phone_icon.svg" alt="">
+                                                +7 (727) 357 33 33
+                                            </a>
+                                        </div>
+                                        <div class="copy">
+                                            © 2020. ТОО “Signal Telecom”. Разработано студией onelab
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -185,7 +316,7 @@
         </div>
     </header>
     <div id="fullpage">
-        <section class="fp-section main">
+        <section id="main firstPage" class=" fp-section main">
             <div class="main_slider">
                 <div class="wrapper_slider">
                     <div class="slide slide_main">
@@ -256,84 +387,381 @@
                     </div>
                 </div>
             </div>
+        </section >
+
+
+        <section class="fp-section  info light" id="info" data-bg='F4F3F6'>
+            <div class="container_section">
+                <div class="wrapper_top_section">
+                    <h2 class="title_section">
+                        Казахстанский <br>
+                        оператор связи
+                        <a href="#">
+                            Подробнее о Компании
+                        </a>
+                    </h2>
+                    <div class="txt">
+                        Интернет, телевидение, телефония.
+                        Наша компания также предоставляет услуги по системной интеграции и является
+                        поставщиком современного мирового телекоммуникационного оборудования на
+                        территории
+                        Казахстана и Центральной Азии.
+
+                    </div>
+                </div>
+                <div class="wrapper_items">
+                    <div class="item">
+                        <div class="img">
+                            <img src="./img/icon_item.png" alt="">
+                        </div>
+                        <div class="descr">
+                            Симметричный канал передачи данных
+                            на скорости до 10 Гб/сек
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img">
+                            <img src="./img/icon_item.png" alt="">
+                        </div>
+                        <div class="descr">
+                            Собственные монтажные бригады, которые оперативно и качественно устраняют любые неполадки сети.
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img">
+                            <img src="./img/icon_item.png" alt="">
+                        </div>
+                        <div class="descr">
+                            Наличие собственного ЦОДа в Алматы с каналом передачи данных до 100 МБ/сек
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img">
+                            <img src="./img/icon_item.png" alt="">
+                        </div>
+                        <div class="descr">
+                            Круглосуточная система мониторинга и техническая поддержка клиентов, позволяющая устранять проблемы раньше, чем вы о них сообщите.
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img">
+                            <img src="./img/icon_item.png" alt="">
+                        </div>
+                        <div class="descr">
+                            Штат квалифицированных IT специалистов, позволяющий максимально быстро
+                            и эффективно любую ситуацию клиента.
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img">
+                            <img src="./img/icon_item.png" alt="">
+                        </div>
+                        <div class="descr">
+                            Штат квалифицированных IT специалистов, позволяющий максимально быстро
+                            и эффективно любую ситуацию клиента.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container_copy">
+                <a href="#" class="phone">
+                    <img src="./img/phone_icon.svg" alt="">
+                    +7 (727) 357 33 33
+                </a>
+                <div class="toggle_next">
+                    <a href="#" class="toggle_btn_next">
+                        <img src="./img/scroll_icon_default.svg" alt="">
+                        Прокрутите для продолжения
+                    </a>
+                </div>
+                <div class="copy">
+                    © 2020. ТОО “Signal Telecom”
+                </div>
+            </div>
+        </section>
+
+        <section class="fp-section services light" id="services" data-bg="F4F3F6">
+           <div class="container_section">
+               <div class="wrapper_top_section">
+                   <div class="text">
+                       <h2 class="title_section">
+                           Услуги
+                       </h2>
+                       <div class="txt">
+                           На сегодняшний день мы активно работаем с крупнейшими застройщиками г. Нур-
+                           султан и г. Алматы по предоставлению качественных услуг в действующих и
+                           строящихся
+                           многоквартирных домах.
+                       </div>
+
+                   </div>
+                   <div class="section_img">
+                       <img src="./img/504.png" alt="">
+                   </div>
+               </div>
+
+               <div class="tabs">
+                   <a href="#" class="active link_tab">
+                       Системная интеграция
+                   </a>
+                   <a href="#" class="link_tab">
+                       ЧАСТНЫМ ЛИЦАМ
+                   </a>
+                   <a href="#" class="link_tab">
+                       Бизнесу
+                   </a>
+               </div>
+               <div class="tabs_content">
+                   <div class="items items_tabs">
+                       <div class="item">
+                           <img src="./img/cam_icon.svg" alt="">
+                           <div class="title">
+                               Системы видеонаблюдения
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/sec_icon.svg" alt="">
+                           <div class="title">
+                               Системы безопасности
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/sma_icon.svg" alt="">
+                           <div class="title">
+                               Smart – решения
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/speak_icon.svg" alt="">
+                           <div class="title">
+                               Каналы связи
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="items items_tabs">
+                       <div class="item">
+                           <img src="./img/int_icon.svg" alt="">
+                           <div class="title">
+                               Интернет
+                           </div>
+                           <div class="txt">
+                               Высокоскоростной интернет
+                               до 1 ГБ/с в многоквартирные
+                               и частные дома даже
+                               в удаленных регионах!
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/TV.svg" alt="">
+                           <div class="title">
+                               Телевидение
+                           </div>
+                           <div class="txt">
+                               Более 100 телевизионных каналов для любых возрастных категорий  и интересов
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/tel_icon.svg" alt="">
+                           <div class="title">
+                               Телефония
+                           </div>
+                           <div class="txt">
+                               Объединение офисов и сотрудников в единую сеть, использование функций Виртуальной АТС
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/speak_icon.svg" alt="">
+                           <div class="title">
+                               Каналы связи
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="items items_tabs">
+                       <div class="item">
+                           <img src="./img/cam_icon.svg" alt="">
+                           <div class="title">
+                               Системы видеонаблюдения 2
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/sec_icon.svg" alt="">
+                           <div class="title">
+                               Системы безопасности
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/sma_icon.svg" alt="">
+                           <div class="title">
+                               Smart – решения
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                       <div class="item">
+                           <img src="./img/speak_icon.svg" alt="">
+                           <div class="title">
+                               Каналы связи
+                           </div>
+                           <div class="txt">
+                               Эффективный инструмент
+                               как для обеспечения безопасности и контроля
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="section_text">
+                   Сеошный текст.
+                   Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа направлений прогрессивного развития. Равным образом дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют определения и уточнения существенных финансовых и административных условий.
+
+               </div>
+           </div>
+            <div class="container_copy">
+                <a href="#" class="phone">
+                    <img src="./img/phone_icon.svg" alt="">
+                    +7 (727) 357 33 33
+                </a>
+                <div class="toggle_next">
+                    <a href="#" class="toggle_btn_next">
+                        <img src="./img/scroll_icon_default.svg" alt="">
+                        Прокрутите для продолжения
+                    </a>
+                </div>
+                <div class="copy">
+                    © 2020. ТОО “Signal Telecom”
+                </div>
+            </div>
+        </section>
+
+        <section class="fp-section distribution light" id="distribution" >
+            <div class="container_section">
+                <div class="img_section">
+                    <img src="./img/removebg.png" alt="">
+                </div>
+                <div class="breadcrumbs">
+                    <a href="#">
+                        Главная
+                    </a>
+                    <a href="#">
+                        Дистрибьюция
+                    </a>
+                </div>
+                <h2 class="title_section">
+                    Дистрибьюция
+                </h2>
+
+
+            </div>
         </section>
 
 
-        <section class="fp-section">
-            test 2
-        </section>
 
+    </div>
+    <div class="sub_menu_list">
 
+    </div>
 
-        <div class="sub_menu_list">
+    <div class="bg_blur">
 
-        </div>
+    </div>
 
-        <div class="bg_blur">
+    <div class="popup">
+    </div>
+    <div class="content_popup">
+        <button class="btn_close">
+            закрыть
+        </button>
+        <div class="content_text">
+            <div class="logo_popup">
+                <img src="./img/logo_dark.svg" alt="">
+            </div>
+            <div class="map content" data-show = 'map'>
 
-        </div>
+                <iframe src="./map.html" frameborder="0" width="100%" height="411px">
 
-        <div class="popup">
-        </div>
-        <div class="content_popup">
-            <button class="btn_close">
-                закрыть
-            </button>
-            <div class="content_text">
-                <div class="logo_popup">
-                    <img src="./img/logo_dark.svg" alt="">
-                </div>
-                <div class="map content" data-show = 'map'>
+                </iframe>
+            </div>
+            <div class="form content" data-show="form">
+                <form action="">
+                    <div class="title">
+                        Вход
+                    </div>
+                    <label for="login">
+                        <img src="./img/user_icon.svg" alt="">
+                        <input type="text" placeholder="Введите ваш логин" name="login" id="login">
+                    </label>
+                    <label for="password">
+                        <img src="./img/key_icon.svg" alt="">
+                        <input type="text" placeholder="Введите пароль" name="password" id="password">
+                    </label>
+                    <div class="btns">
+                        <a href="#">
+                            Забыли пароль?
+                        </a>
+                        <button  class="btn_sing_in">
+                            Войти
+                        </button>
+                    </div>
+                </form>
 
-                    <iframe src="./map.html" frameborder="0" width="100%" height="411px">
-
-                    </iframe>
-                </div>
-                <div class="form content" data-show="form">
-                    <form action="">
-                        <div class="title">
-                            Вход
-                        </div>
-                        <label for="login">
-                            <img src="./img/user_icon.svg" alt="">
-                            <input type="text" placeholder="Введите ваш логин" name="login" id="login">
-                        </label>
-                        <label for="password">
-                            <img src="./img/key_icon.svg" alt="">
-                            <input type="text" placeholder="Введите пароль" name="password" id="password">
-                        </label>
-                        <div class="btns">
-                            <a href="#">
-                                Забыли пароль?
-                            </a>
-                            <button  class="btn_sing_in">
-                                Войти
-                            </button>
-                        </div>
-                    </form>
-
-                    <div class="info">
+                <div class="info">
                         <span>
                             Нет аккаунта?
                         </span>
-                        <a href="#">
-                            Зарегистрироваться
-                        </a>
-                    </div>
+                    <a href="#">
+                        Зарегистрироваться
+                    </a>
                 </div>
+            </div>
 
-                <div class="footer_content">
+            <div class="footer_content">
                     <span>
                         Казахстанский оператор связи
                     </span>
-                    <span>
+                <span>
                         © 2020. ТОО “Signal Telecom”. Разработано студией onelab
                     </span>
-                </div>
             </div>
         </div>
     </div>
-
 </div>
 
 <script src="./js/jquery.min.js"></script>

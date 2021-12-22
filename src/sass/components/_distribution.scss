@@ -1,0 +1,25 @@
+.distribution{
+  background: linear-gradient(180deg, #D3D2D9 0%, #F4F3F6 100%);
+  .container_section{
+    position: relative;
+    height: 100vh;
+  }
+  .img_section{
+    position: absolute;
+    top: -170px;
+    left: calc(100% - 95px);
+    transform: translateX(calc(-95px));
+    bottom: 0;
+    z-index: 200;
+    height: 100vh;
+    width: 100%;
+    img{
+
+      width: 630px;
+      object-fit: cover;
+    }
+  }
+  .breadcrumbs{
+    margin-top: 170px;
+  }
+}

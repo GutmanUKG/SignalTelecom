@@ -3,8 +3,9 @@ header{
   width: 100%;
   background: transparent;
   position: fixed;
-  z-index: 50;
+  z-index: 201;
   padding-top: 54px;
+  padding-bottom: 50px;
   .wrapper-flex{
     justify-content: space-between;
     align-items: center;
@@ -15,6 +16,9 @@ header{
     z-index: 50;
     a{
       display: block;
+      .logo_light{
+        display: none;
+      }
     }
   }
   .main_menu{

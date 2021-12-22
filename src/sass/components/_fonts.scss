@@ -22,3 +22,33 @@
   font-weight: 700;
   font-style: normal;
 }
+
+body{
+  font-family: 'Proxima Nova',sans-serif;
+  font-weight: normal;
+}
+h2{
+
+}
+h2.title_section{
+  font-family: 'Proxima Nova',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.phone{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Proxima Nova',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+}
+

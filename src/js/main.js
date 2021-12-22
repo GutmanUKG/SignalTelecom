@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
+
     //Всплытие блока в зависимоти от места нажатия
     const popup = document.querySelector('.popup'),
         linkHoverLocation = document.querySelector('.link_hover_location'),
@@ -131,26 +132,46 @@ document.addEventListener('DOMContentLoaded', ()=>{
         document.body.classList.remove('active_poup');
     })
 
-    new fullpage('#fullpage'), {
-        scrollHorizontally: true,
-        loopHorizontal: true,
-        loopBottom:true,
-        fitToSection:true,
-        fixedElements: 'header',
+    let header = document.querySelector('header')
+    $('#fullpage').fullpage({
+        scrollHorizontally:true,
+        scrollOverflow: true,
+        autoScrolling:true,
+        interlockedSlides: true,
+        fp_scrolloverflow: true,
+        onLeave: function (index, nextIndex, direction) {
+            var leavingSection = $(this);
+            if(nextIndex.item.classList.contains('light')){
+                document.body.classList.add('light_section');
+                console.log(nextIndex.item.dataset.bg)
+                if(nextIndex.item.dataset.bg != undefined){
+                    header.style.background = '#'+ nextIndex.item.dataset.bg;
+                }else{
+                    header.style.background = ''
+                }
+            }else{
+                document.body.classList.remove('light_section');
+                header.style.background = '';
+            }
+        }
+    })
 
-    }
-    //methods
+
+
 
 
 
     //
 
     let btnToggleNextSection = document.querySelector('.toggle_btn_next');
+    let sections = document.querySelectorAll('.fp-section');
     btnToggleNextSection.addEventListener('click', (e)=>{
         e.preventDefault();
         fullpage_api.moveSectionDown();
     })
 
+    //_____________Функционад fullpage.js
+    //_____________
     const nextBtn = document.querySelector('.fp-next')
     function nextSlide() {
         fullpage_api.moveSlideRight()
@@ -260,14 +281,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     start();
 
-    // document.querySelector("#toggle").addEventListener("click", function () {
-    //     if (timer.isRunning) {
-    //         stop();
-    //         this.innerHTML = "Restart";
-    //     } else {
-    //         start();
-    //         this.innerHTML = "Stop";
-    //     }
-    // });
+//_____________ Табы на главной странице
+    let tabBtns = document.querySelectorAll('.link_tab'),
+        itemsTabs = document.querySelectorAll('.items_tabs');
+
+    tabBtns.forEach((item,id)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            showTabs(id)
+
+        })
+    })
+
+    function showTabs(id) {
+        for(let i = 0; i < tabBtns.length; i++){
+            tabBtns[i].classList.remove('active');
+            itemsTabs[i].classList.remove('active')
+            itemsTabs[id].classList.add('active');
+            tabBtns[id].classList.add('active')
+        }
+    }
+    showTabs(0)
+//____________
+
+
 
 })
