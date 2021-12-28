@@ -27,9 +27,9 @@
                 </div>
                 <div class="main_menu">
                     <nav>
-                        <ul>
+                        <ul id="menu">
                             <li>
-                                <a href="#">
+                                <a href="#main">
                                     О компании
                                 </a>
                                 <div class="menu_el_main menu_el">
@@ -61,7 +61,7 @@
 
 
                             <li>
-                                <a href="#">
+                                <a href="#services">
                                     УСЛУГИ
                                 </a>
                                 <div class="menu_el_main menu_el">
@@ -157,7 +157,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#contact">
                                     Контакты
                                 </a>
                                 <div class="menu_el_main menu_el contact">
@@ -316,7 +316,7 @@
         </div>
     </header>
     <div id="fullpage">
-        <section id="main firstPage" class=" fp-section main">
+        <section id="main" class=" fp-section main">
             <div class="main_slider">
                 <div class="wrapper_slider">
                     <div class="slide slide_main">
@@ -563,25 +563,30 @@
 
                    <div class="items items_tabs">
                        <div class="item">
-                           <img src="./img/int_icon.svg" alt="">
-                           <div class="title">
-                               Интернет
-                           </div>
-                           <div class="txt">
-                               Высокоскоростной интернет
-                               до 1 ГБ/с в многоквартирные
-                               и частные дома даже
-                               в удаленных регионах!
-                           </div>
+                           <a href="./detail_internet.html">
+                               <img src="./img/int_icon.svg" alt="">
+                               <div class="title">
+                                   Интернет
+                               </div>
+                               <div class="txt">
+                                   Высокоскоростной интернет
+                                   до 1 ГБ/с в многоквартирные
+                                   и частные дома даже
+                                   в удаленных регионах!
+                               </div>
+                           </a>
                        </div>
                        <div class="item">
-                           <img src="./img/TV.svg" alt="">
-                           <div class="title">
-                               Телевидение
-                           </div>
-                           <div class="txt">
-                               Более 100 телевизионных каналов для любых возрастных категорий  и интересов
-                           </div>
+                           <a href="./detail_tv.html">
+                               <img src="./img/TV.svg" alt="">
+                               <div class="title">
+                                   Телевидение
+                               </div>
+                               <div class="txt">
+                                   Более 100 телевизионных каналов для любых возрастных категорий  и интересов
+                               </div>
+                           </a>
+
                        </div>
                        <div class="item">
                            <img src="./img/tel_icon.svg" alt="">
@@ -671,11 +676,178 @@
             </div>
         </section>
 
-        <section class="fp-section distribution light" id="distribution" >
+
+        <section class="fp-section news light" id="news">
             <div class="container_section">
-                <div class="img_section">
-                    <img src="./img/removebg.png" alt="">
+                <div class="breadcrumbs">
+                    <a href="#">
+                        Главная
+                    </a>
+                    <a href="#">
+                        Новости
+                    </a>
                 </div>
+                <h2 class="title_section">
+                    Новости компании
+                </h2>
+                <div class="content">
+                    <div class="detail_news">
+
+
+                        <img src="./img/news_img.png" alt="">
+                        <div class="date">
+                            13 Сентября, 2021
+                        </div>
+
+                        <div class="title">
+                            Открытие нового дата-центра <br>
+                            в Алматы
+                        </div>
+
+                        <div class="txt">
+                            <p>
+                                Сегодня, в г. Алматы состоялось открытие Центра обработки данных
+                                ТОО “Signal Telecom”. Это последний ЦОД компании, построенный в рамках проекта «Создание серверной интернет платформы для оказания услуг хостинга государственным органам РК».
+
+                            </p>
+                            <p>
+                                Данный проект является инфраструктурной площадкой для развития электронного правительства в Республике Казахстан и предназначен для предоставления государственным органам услуг хостинга, «colocation» (размещение оборудования и предоставление в аренду инфраструктуры), «software as aservice» (программное обеспечение по требованию)  и системно-технического обслуживания программно-аппаратного комплекса.
+                            </p>
+
+                            <p>
+                                Новый дата-центр построен в соответствии с международными стандартами качества и отвечает 2-му уровню безопасности. Это означает, что центр работает круглосуточно, 7 дней в неделю, 365 дней в году, защищен от несанкционированного доступа и физических повреждений,  а отказоустойчивость функционирования программно-аппаратных комплексов достигает уровня более 99%.
+                            </p>
+
+                            <p>
+                                Центр оснащен системами видеонаблюдения, охранно-пожарной сигнализации, автоматического газового пожаротушения, бесперебойного электроснабжения, кондиционирования, а также комплексной системой мониторинга и управления. Словом, всеми необходимыми требованиями для обеспечения сохранности данных клиентов центра.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="news_list">
+                        <div class="item">
+                            <div class="date">
+                                5 Сентября, 2021
+                            </div>
+
+                            <div class="title">
+                                Signal Telecom провел интернет в частный сектор по технологии GPON
+                            </div>
+                            <div class="anons">
+                                ТОО “Signal Telecom” подключил 435 населённых пунктов к высокоскоростному интернету по технологии GPON.
+                            </div>
+
+                            <a href="#">
+                                Подробнее
+                            </a>
+                        </div>
+                        <div class="item">
+                            <div class="date">
+                                21 Августа, 2021
+                            </div>
+
+                            <div class="title">
+                                Big Data Day. Казахстан
+                            </div>
+                            <div class="anons">
+                                Конференция, посвященная использованию облачных технологий и больших данных для повышения эффективности бизнеса.
+                            </div>
+
+                            <a href="#">
+                                Подробнее
+                            </a>
+                        </div>
+                        <div class="item">
+                            <div class="date">
+                                17 Июня, 2021
+                            </div>
+
+                            <div class="title">
+                                Море интернета
+                            </div>
+                            <div class="anons">
+                                ТОО “Signal Telecom” обеспечил прибрежную зону главных курортов Аральского моря Wi-Fi-сетью для безлимитного серфинга в интернете.
+                            </div>
+
+                            <a href="#">
+                                Подробнее
+                            </a>
+                        </div>
+                        <div class="item">
+                            <div class="date">
+                                6 Мая, 2021
+                            </div>
+
+                            <div class="title">
+                                Чем Виртуальная АТС лучше классической?
+                            </div>
+                            <div class="anons">
+                                Облачная АТС дает возможность использования многоканальных номеров, предлагая интеллектуальную переадресацию звонков, гибкую аналитику...
+                            </div>
+
+                            <a href="#">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="section_menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            наша миссия
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            наша Команда
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            наши преимущества
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            Новости
+                        </a>
+                    </li>
+                    <li >
+                        <a href="#">
+                            Вакансии
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container_copy">
+                <a href="#" class="phone">
+                    <img src="./img/phone_icon.svg" alt="">
+                    +7 (727) 357 33 33
+                </a>
+                <div class="toggle_next">
+                    <a href="#" class="toggle_btn_next">
+                        <img src="./img/scroll_icon_default.svg" alt="">
+                        Прокрутите для продолжения
+                    </a>
+                </div>
+                <div class="copy">
+                    © 2020. ТОО “Signal Telecom”
+                </div>
+            </div>
+        </section>
+
+
+        <section class="fp-section distribution light" id="distribution" >
+            <div class="fp-bg"></div>
+            <div class="container_section">
+<!--                <div class="img_section">-->
+<!--                    <img src="./img/removebg.png" alt="">-->
+<!--                </div>-->
                 <div class="breadcrumbs">
                     <a href="#">
                         Главная
@@ -688,7 +860,260 @@
                     Дистрибьюция
                 </h2>
 
+                <div class="tabs">
+                    <a href="#" class="active">
+                        mimosa
+                    </a>
+                    <a href="#">
+                        rubetek
+                    </a>
+                </div>
 
+                <div class="txt">
+                    <p>
+                        ТОО “Signal Telecom” – является официальным дистрибьютором оборудования американской компании Mimosa by Airspan  на территории Казахстана и Центральной Азии.
+                    </p>
+
+                    <p>
+                        Радиотехнологии компании Mimosa by Airspan – это широкополосная беспроводная сетевая связь со скоростью оптоволокна.
+                    </p>
+                </div>
+
+            </div>
+            <div class="container_copy">
+                <a href="#" class="phone">
+                    <img src="./img/phone_icon.svg" alt="">
+                    +7 (727) 357 33 33
+                </a>
+                <div class="toggle_next">
+                    <a href="#" class="toggle_btn_next">
+                        <img src="./img/scroll_icon_default.svg" alt="">
+                        Прокрутите для продолжения
+                    </a>
+                </div>
+                <div class="copy">
+                    © 2020. ТОО “Signal Telecom”
+                </div>
+            </div>
+        </section>
+
+        <section class="fp-section contact" id="contact">
+            <div class="container_section">
+                <div class="top_wrapper">
+                    <h2 class="title_section">
+                        Есть вопросы?
+                        <img src="./img/smile.svg" alt="">
+                    </h2>
+                    <div class="txt">
+                        Для подключения услуги и по другим существующим вопросам, заполните пожалуйста форму обратной cвязи или свяжитесь с нами по телефону.
+                    </div>
+                </div>
+
+                <div class="colums">
+                    <div class="col_form">
+                        <div class="title">
+                            Мне интересны:
+                        </div>
+                        <div class="select_els">
+                            <a href="#">
+                                Заявка на подключение
+                            </a>
+                            <a href="#">
+                                Интернет
+                            </a>
+                            <a href="#">
+                                Телефония
+                            </a>
+                            <a href="#">
+                                Телевидение
+                            </a>
+                            <a href="#">
+                                В частный дом
+                            </a>
+                            <a href="#">
+                                Умный дом
+                            </a>
+                        </div>
+
+                        <div class="title">
+                            Заполните:
+                        </div>
+
+                        <div class="form_group">
+                            <form action="">
+                                <input type="text" placeholder="Ваш город">
+
+                                <input type="text" placeholder="Имя">
+
+                                <input type="text" placeholder="Название компании">
+                                <input type="text" placeholder="E-mail">
+
+                                <input type="text" placeholder="Контактный телефон">
+
+                                <div class="title">
+                                    Дополнительные комметарии:
+                                </div>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение">
+
+                                </textarea>
+
+                                <button type="submit" class="btn btn_submit">
+                                    Отправить
+                                </button>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="col_adress">
+                        <div class="item_city">
+                            <div class="title">
+                                г. Алматы
+                            </div>
+
+                            <div class="item">
+                                <div class="title_dark">
+                                    АДРЕС
+                                </div>
+                                <div class="txt">
+                                    050037, Республика Казахстан, г. Алматы, <br>
+                                    ул. Джетысуйская, дом 43
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title_dark">
+                                    Телефоны
+                                </div>
+                                <div class="txt">
+                                    <a href="#">
+                                    <span>
+                                         Call Center:
+                                    </span>
+                                        +7 (727) 357 33 33
+                                    </a>
+                                    <a href="#">
+                                    <span>
+                                         Технический отдел:
+                                    </span>
+                                        +7 (705) 216 07 45
+                                    </a>
+                                    <a href="#">
+                                   <span>
+                                        Отдел продаж:
+                                   </span>
+                                        +7 (727) 382 22 22
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title_dark">
+                                    Электронная почта
+                                </div>
+                                <div class="txt">
+                                    <a href="#">
+                                    <span>
+                                        Отдел поддержки:
+                                    </span>
+                                        support@signal.kz
+
+                                    </a>
+                                    <a href="#">
+                                    <span>
+                                         Отдел продаж:
+                                    </span>
+                                        sales@signal.kz
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item_city">
+                            <div class="title">
+                                г. Нур-Султан
+                            </div>
+
+                            <div class="item">
+                                <div class="title_dark">
+                                    АДРЕС
+                                </div>
+                                <div class="txt">
+                                    010000, Республика Казахстан, г. Нур-Султан,
+                                    ул. Достык  16, Talan Towers, офис 605
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title_dark">
+                                    Телефоны
+                                </div>
+                                <div class="txt">
+                                    <a href="#">
+                                    <span>
+                                         Call Center:
+                                    </span>
+                                        +7 (727) 357 33 33
+                                    </a>
+                                    <a href="#">
+                                    <span>
+                                         Технический отдел:
+                                    </span>
+                                        +7 (705) 216 07 45
+                                    </a>
+                                    <a href="#">
+                                   <span>
+                                        Отдел продаж:
+                                   </span>
+                                        +7 (727) 382 22 22
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title_dark">
+                                    Электронная почта
+                                </div>
+                                <div class="txt">
+                                    <a href="#">
+                                    <span>
+                                        Отдел поддержки:
+                                    </span>
+                                        support@signal.kz
+
+                                    </a>
+                                    <a href="#">
+                                    <span>
+                                         Отдел продаж:
+                                    </span>
+                                        sales@signal.kz
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container_copy">
+                <div class="links">
+                    <a href="#">
+                        Youtube
+                    </a>
+                    <a href="#">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        Facebook
+                    </a>
+                    <a href="#">
+                        Twitter
+                    </a>
+                </div>
+
+                <div class="copy">
+                    © 2020. ТОО “Signal Telecom”. Разработано студией onelab
+                </div>
             </div>
         </section>
 

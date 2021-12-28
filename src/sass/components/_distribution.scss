@@ -1,8 +1,19 @@
 .distribution{
   background: linear-gradient(180deg, #D3D2D9 0%, #F4F3F6 100%);
+  .fp-bg{
+    background: url("../img/removebg.png")  right  no-repeat;
+    background-size: contain;
+    width: 613px;
+    right: 225px;
+    height: 100vh;
+
+    //position: absolute;
+    position: fixed;
+
+  }
   .container_section{
     position: relative;
-    height: 100vh;
+    //height: 100vh;
   }
   .img_section{
     position: absolute;
@@ -21,5 +32,78 @@
   }
   .breadcrumbs{
     margin-top: 170px;
+  }
+
+  .tabs{
+    display: flex;
+    margin-top: 64px;
+    a{
+      font-family: 'Proxima Nova',sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #000000;
+      position: relative;
+      display: flex;
+      align-items: center;
+      order: 0;
+      gap: 32px;
+      margin-right: 32px;
+      &:after{
+        content: '';
+        display: block;
+        width: 32px;
+        height: 1px;
+        background: #C92C7B;
+        transform: scale(0);
+        transition: 0.5s all;
+      }
+      &:before{
+        content: '';
+        display: block;
+        background: rgba(123, 119, 129, 0.5);
+        width: 1px;
+        height: 24px;
+        order: 1;
+      }
+      &:last-child{
+        &:before{
+          display: none;
+        }
+      }
+    }
+
+    .active{
+
+      &:after{
+        content: '';
+        display: block;
+        transform: scale(1);
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+      }
+    }
+  }
+
+  .txt{
+    max-width: 640px;
+    width: 100%;
+    font-family: 'Proxima Nova',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #7B7781;
+    margin-top: 67px;
+    p{
+      margin-bottom: 2rem;
+    }
+  }
+  .container_copy{
+    margin: 0 auto;
   }
 }

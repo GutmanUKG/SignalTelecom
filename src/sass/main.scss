@@ -9,6 +9,11 @@
 @import "components/light_theme";
 @import "components/services";
 @import "components/distribution";
+@import "components/main_inner";
+@import "components/breadcrumbs";
+@import "components/card";
+@import "components/news";
+@import "components/contact";
 *{
   padding: 0;
   margin: 0;
@@ -33,7 +38,7 @@ body{
 }
 
 .bg_blur{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

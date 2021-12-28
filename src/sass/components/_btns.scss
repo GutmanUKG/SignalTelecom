@@ -126,3 +126,35 @@
   border: none;
   outline: none;
 }
+.btn{
+  display: block;
+  text-decoration: none;
+  font-family: 'Proxima Nova',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 12px 94px;
+  box-sizing: border-box;
+  cursor: pointer;
+  &_card{
+    width: 280px;
+    height: 48px;
+    background: url("../img/btn_card.png") center no-repeat;
+  }
+  &_submit{
+    background: linear-gradient(90.47deg, #554596 0%, #C92C7B 100%);
+    border-radius: 8px;
+    font-family: 'Proxima Nova',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    margin-top: 40px;
+  }
+}

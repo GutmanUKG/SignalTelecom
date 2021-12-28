@@ -95,13 +95,13 @@ wrapper_menu_list{
 
 }
 .sub_menu_list{
+  position: fixed;
   transition: 0.5s all;
   overflow: hidden;
   padding-left: 112px;
   padding-top: 341px;
   display: flex;
   box-sizing: border-box;
-  position: absolute;
   left: 0;
   width: calc(58%);
   height: 100vh;

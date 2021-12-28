@@ -133,17 +133,53 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     let header = document.querySelector('header')
+
     $('#fullpage').fullpage({
-        scrollHorizontally:true,
+        menu: '#menu',
+        lockAnchors: false,
+        // anchors:['main', 'info', 'services','news','distribution', 'contact'],
+        navigation: false,
+        navigationTooltips: ['main', 'info' ,'services', 'news', 'distribution', 'contact'],
+        showActiveTooltip: false,
+        slidesNavigation: false,
+        slidesNavPosition: 'bottom',
+
+        //Скроллинг
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        dragAndMove: false,
+        offsetSections: false,
+        resetSliders: false,
+        fadingEffect: false,
+        // normalScrollElements: '#info, #services ,#news , #distribution',
         scrollOverflow: true,
-        autoScrolling:true,
-        interlockedSlides: true,
-        fp_scrolloverflow: true,
-        onLeave: function (index, nextIndex, direction) {
+        scrollOverflowReset: true,
+        scrollOverflowOptions: null,
+        touchSensitivity: 15,
+        fixedElements: '.section_menu',
+        //Доступ
+
+        //Дизайн
+
+
+        // parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+        onLeave: function (index, nextIndex) {
             var leavingSection = $(this);
             if(nextIndex.item.classList.contains('light')){
                 document.body.classList.add('light_section');
-                console.log(nextIndex.item.dataset.bg)
                 if(nextIndex.item.dataset.bg != undefined){
                     header.style.background = '#'+ nextIndex.item.dataset.bg;
                 }else{
@@ -153,10 +189,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 document.body.classList.remove('light_section');
                 header.style.background = '';
             }
+
+            if(nextIndex.item.classList.contains('news')){
+
+            }
         }
     })
 
+    let all_sections = document.querySelectorAll('.fp-section');
 
+    if(all_sections[0].classList.contains('light')){
+        document.body.classList.add('light_section');
+        if(all_sections[0].dataset.bg != undefined){
+            header.style.background = '#'+ all_sections[0].dataset.bg;
+        }
+    }
 
 
 
@@ -165,10 +212,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     let btnToggleNextSection = document.querySelector('.toggle_btn_next');
     let sections = document.querySelectorAll('.fp-section');
-    btnToggleNextSection.addEventListener('click', (e)=>{
-        e.preventDefault();
-        fullpage_api.moveSectionDown();
-    })
+    if(btnToggleNextSection != null){
+        btnToggleNextSection.addEventListener('click', (e)=>{
+            e.preventDefault();
+            fullpage_api.moveSectionDown();
+        })
+    }
+
 
     //_____________Функционад fullpage.js
     //_____________
@@ -176,12 +226,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
     function nextSlide() {
         fullpage_api.moveSlideRight()
     }
-    nextBtn.addEventListener('click', ()=>{
-       clearInterval(autoplaySlide);
-        nextSlide()
-        checkCurrentSlide();
-        setTimeout(autoplaySlide , 5000)
-    })
+    if(nextBtn != null){
+        nextBtn.addEventListener('click', ()=>{
+            clearInterval(autoplaySlide);
+            nextSlide()
+            checkCurrentSlide();
+            setTimeout(autoplaySlide , 5000)
+        })
+    }
+
 
     let autoplaySlide =  setInterval(()=>{
         nextSlide()
@@ -192,94 +245,102 @@ document.addEventListener('DOMContentLoaded', ()=>{
         fullCount = document.querySelector('.full_count'),
         listSlide = document.querySelectorAll('.slide_main');
 
+    console.log(listSlide)
 
     function checkCurrentSlide() {
-        fullCount.textContent = listSlide.length;
-        if(listSlide.length < 10){
-            fullCount.textContent = '0' + listSlide.length;
-        }
-        for(let i = 0; i < listSlide.length; i++){
-            if(listSlide[i].classList.contains('active')){
-                i++
-                if(i < 10){
-                    currentCount.textContent = `0${i}`
-                }else{
-                    currentCount.textContent = `${i}`
+        if(listSlide.length > 0){
+            fullCount.textContent = listSlide.length;
+            if(listSlide.length < 10){
+                fullCount.textContent = '0' + listSlide.length;
+            }
+            for(let i = 0; i < listSlide.length; i++){
+                if(listSlide[i].classList.contains('active')){
+                    i++
+                    if(i < 10){
+                        currentCount.textContent = `0${i}`
+                    }else{
+                        currentCount.textContent = `${i}`
+                    }
                 }
             }
         }
+
     }
     checkCurrentSlide()
     //Анимация loader
 
     const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
+    if(canvas != null){
+        const ctx = canvas.getContext("2d");
+        const timer = {
+            duration: 10000, // ms
+            startTime: null,
+            isRunning: false
+        };
+        const circle = {
+            x:0,
+            y:0,
+            radius: 50,
+            center: { x: canvas.width / 2, y: canvas.height / 2 }
+        };
 
-    const timer = {
-        duration: 10000, // ms
-        startTime: null,
-        isRunning: false
-    };
-    const circle = {
-        x:0,
-        y:0,
-        radius: 50,
-        center: { x: canvas.width / 2, y: canvas.height / 2 }
-    };
+        const PI2 = Math.PI * 2;
+        const PIHalf = Math.PI / 2;
+        let progress = 0;
 
-    const PI2 = Math.PI * 2;
-    const PIHalf = Math.PI / 2;
-    let progress = 0;
+        function render(timestamp) {
+            if (!timer.isRunning) {
+                return;
+            }
 
-    function render(timestamp) {
-        if (!timer.isRunning) {
-            return;
+            if (!timer.startTime) {
+                timer.startTime = timestamp;
+            }
+
+            const runtime = timestamp - timer.startTime;
+            progress = runtime / timer.duration;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            draw(circle, progress);
+
+            if (runtime < timer.duration) {
+                requestAnimationFrame(render);
+            } else {
+                start();
+            }
         }
 
-        if (!timer.startTime) {
-            timer.startTime = timestamp;
+        function draw(circle, progress) {
+            const start = -PIHalf; // begin from top
+            const end = PI2 * progress + start;
+            ctx.beginPath();
+            ctx.arc(circle.center.x, circle.center.y, circle.radius, start, end);
+            ctx.lineWidth = 2;
+            ctx.lineCap = "round";
+            ctx.strokeStyle = "white";
+            ctx.stroke();
         }
 
-        const runtime = timestamp - timer.startTime;
-        progress = runtime / timer.duration;
+        function start() {
+            timer.isRunning = true;
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+            progress = 0;
+            timer.startTime = null;
 
-        draw(circle, progress);
-
-        if (runtime < timer.duration) {
-            requestAnimationFrame(render);
-        } else {
-            start();
+            setTimeout(() => {
+                requestAnimationFrame(render);
+            }, 300);
         }
+        function stop() {
+            timer.isRunning = false;
+        }
+
+        start();
     }
 
-    function draw(circle, progress) {
-        const start = -PIHalf; // begin from top
-        const end = PI2 * progress + start;
-        ctx.beginPath();
-        ctx.arc(circle.center.x, circle.center.y, circle.radius, start, end);
-        ctx.lineWidth = 2;
-        ctx.lineCap = "round";
-        ctx.strokeStyle = "white";
-        ctx.stroke();
-    }
 
-    function start() {
-        timer.isRunning = true;
 
-        progress = 0;
-        timer.startTime = null;
-
-        setTimeout(() => {
-            requestAnimationFrame(render);
-        }, 300);
-    }
-    function stop() {
-        timer.isRunning = false;
-    }
-
-    start();
 
 //_____________ Табы на главной странице
     let tabBtns = document.querySelectorAll('.link_tab'),
