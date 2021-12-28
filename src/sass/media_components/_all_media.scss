@@ -1,0 +1,59 @@
+@media (max-width: 1720px) {
+  h2.title_section{
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .info{
+    .wrapper_items{
+      justify-content: space-around;
+    }
+  }
+
+  .services{
+    .tabs_content{
+      //padding-right: 0;
+      .items{
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  }
+
+  .news{
+    .content{
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 1620px) {
+  .wrapper_top_section{
+    .section_img{
+      max-width: 450px;
+      img{
+        width: 100%;
+      }
+    }
+    .txt{
+      max-width: 550px;
+    }
+  }
+
+  .contact{
+    .top_wrapper{
+      gap: 30px;
+    }
+    .colums{
+      gap: 30px;
+    }
+    .title_section{
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 1520px) {
+
+}
+
+//
