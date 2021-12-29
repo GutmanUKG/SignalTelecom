@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-
-
+    let header = document.querySelector('header')
+    let light_logo = document.querySelector('.logo_light'),
+        dark_logo = document.querySelector('.logo_dark');
     //Всплытие блока в зависимоти от места нажатия
     const popup = document.querySelector('.popup'),
         linkHoverLocation = document.querySelector('.link_hover_location'),
@@ -98,10 +99,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 subMenu.style.left = '0%';
                 document.body.classList.add('active_poup');
                 addlistenerForSubMenu()
+                if(document.body.classList.contains('light_section')){
+                    header.classList.add('transpar')
+                }
 
             }else{
                 subMenu.style.left = '-200%'
                 document.body.classList.remove('active_poup');
+                console.log('else Block')
+                header.classList.remove('transpar')
+
             }
         })
     })
@@ -141,9 +148,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     bgBlur.addEventListener('mouseover', ()=>{
         subMenu.style.left = '-200%'
         document.body.classList.remove('active_poup');
+        header.classList.remove('transpar')
     })
 
-    let header = document.querySelector('header')
+
 
     $('#fullpage').fullpage({
         menu: '#menu',
@@ -191,14 +199,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
             var leavingSection = $(this);
             if(nextIndex.item.classList.contains('light')){
                 document.body.classList.add('light_section');
-                if(nextIndex.item.dataset.bg != undefined){
-                    header.style.background = '#'+ nextIndex.item.dataset.bg;
-                }else{
-                    header.style.background = ''
-                }
+                // if(nextIndex.item.dataset.bg != undefined){
+                //     header.style.background = nextIndex.item.dataset.bg;
+                // }else{
+                //     header.style.background = ''
+                // }
             }else{
                 document.body.classList.remove('light_section');
                 header.style.background = '';
+
+
             }
 
             if(nextIndex.item.classList.contains('news')){
@@ -212,7 +222,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     if(all_sections[0].classList.contains('light')){
         document.body.classList.add('light_section');
         if(all_sections[0].dataset.bg != undefined){
-            header.style.background = '#'+ all_sections[0].dataset.bg;
+            header.style.background =  all_sections[0].dataset.bg;
         }
     }
 

@@ -1,6 +1,7 @@
 
 .light_section{
   header{
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 76.04%, rgba(255, 255, 255, 0) 100%);
     .logo{
       a{
         .logo_light{
@@ -16,7 +17,7 @@
       ul{
         li.active{
           a{
-            color: #000000;
+            //color: #000000;
           }
         }
         li{
@@ -69,98 +70,98 @@
       color: #7B7781;
     }
   }
-  .sub_menu_list{
-    background: rgb(244, 243, 246);
-    .contact{
-      background: rgb(244, 243, 246);
-
-      .active_el{
-        .contact_txt{
-          .title{
-            color: #7b7781;
-          }
-          .sub_title{
-            color: #7b7781;
-          }
-
-          .adress_block{
-            small{
-              color: #7b7781;
-            }
-            .txt{
-              color: #7b7781;
-            }
-          }
-          .phones{
-            a{
-              color: #7b7781;
-              span{
-                color: #7b7781;
-              }
-            }
-            small{
-              color: #7b7781;
-            }
-            .txt{
-              color: #7b7781;
-            }
-          }
-          .email{
-            a{
-              color: #7b7781;
-              span{
-                color: #7b7781;
-              }
-            }
-            small{
-              color: #7b7781;
-            }
-            .txt{
-              color: #7b7781;
-            }
-          }
-        }
-      }
-    }
-    .menu_el{
-
-      .not_path{
-         li{
-           a{
-             color: #7b7781;
-           }
-         }
-      }
-      ul{
-        li{
-          color: #7b7781;
-
-          .sub_menu_el{
-            li {
-              a{
-                color: #7b7781;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .footer{
-      .phone{
-        a{
-          color: #7b7781;
-          img{
-            filter: invert(1);
-          }
-        }
-      }
-
-      .copy{
-        color: #7b7781;
-      }
-    }
-  }
+  //.sub_menu_list{
+  //  background: rgb(244, 243, 246);
+  //  .contact{
+  //    background: rgb(244, 243, 246);
+  //
+  //    .active_el{
+  //      .contact_txt{
+  //        .title{
+  //          color: #7b7781;
+  //        }
+  //        .sub_title{
+  //          color: #7b7781;
+  //        }
+  //
+  //        .adress_block{
+  //          small{
+  //            color: #7b7781;
+  //          }
+  //          .txt{
+  //            color: #7b7781;
+  //          }
+  //        }
+  //        .phones{
+  //          a{
+  //            color: #7b7781;
+  //            span{
+  //              color: #7b7781;
+  //            }
+  //          }
+  //          small{
+  //            color: #7b7781;
+  //          }
+  //          .txt{
+  //            color: #7b7781;
+  //          }
+  //        }
+  //        .email{
+  //          a{
+  //            color: #7b7781;
+  //            span{
+  //              color: #7b7781;
+  //            }
+  //          }
+  //          small{
+  //            color: #7b7781;
+  //          }
+  //          .txt{
+  //            color: #7b7781;
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //  .menu_el{
+  //
+  //    .not_path{
+  //       li{
+  //         a{
+  //           color: #7b7781;
+  //         }
+  //       }
+  //    }
+  //    ul{
+  //      li{
+  //        color: #7b7781;
+  //
+  //        .sub_menu_el{
+  //          li {
+  //            a{
+  //              color: #7b7781;
+  //            }
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //
+  //  .footer{
+  //    .phone{
+  //      a{
+  //        color: #7b7781;
+  //        img{
+  //          filter: invert(1);
+  //        }
+  //      }
+  //    }
+  //
+  //    .copy{
+  //      color: #7b7781;
+  //    }
+  //  }
+  //}
   .bg_blur{
     background: rgba(244, 243, 246,.8);
   }
