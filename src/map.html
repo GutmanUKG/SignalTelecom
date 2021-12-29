@@ -1219,11 +1219,11 @@
       function selectCity(data, arr = false) {
           for(let i = 0; i < cityes.length; i++){
 
-                if(arr = true){
+                if(arr == true){
                     if(cityes[i].classList.contains('dot_active')) {
                         let x = cityes[i].getBoundingClientRect().x,
                             y = cityes[i].getBoundingClientRect().y;
-                        dotBg.style.transform = `translate(${x-3}px , ${y-3}px)`;
+                        dotBg.style.transform = `translate(${x+5}px , ${y+5}px)`;
                         citySelect.style.transform = `translate(${x}px , ${y - 40}px)`;
                         citySelect.textContent = cityes[i].dataset.city;
                         cityLink[i].classList.add('active')
@@ -1233,7 +1233,7 @@
                     if(cityes[i].classList.contains('dot_active')){
                         let x = data.getBoundingClientRect().x,
                             y = data.getBoundingClientRect().y;
-                        dotBg.style.transform = `translate(${x}px , ${y - 40}px)`;
+                        dotBg.style.transform = `translate(${x+ 5}px , ${y + 5}px)`;
                         citySelect.style.transform = `translate(${x}px , ${y - 40}px)`;
                         citySelect.textContent = data.dataset.city;
                         cityLink[i].classList.add('active')
@@ -1251,7 +1251,7 @@
                 if(data.dataset.select == cityes[i].dataset.city){
                     let x = cityes[i].getBoundingClientRect().x,
                         y = cityes[i].getBoundingClientRect().y;
-                    dotBg.style.transform = `translate(${x - 3}px , ${y - 3}px)`;
+                    dotBg.style.transform = `translate(${x + 5}px , ${y +5 }px)`;
                     citySelect.style.transform = `translate(${x}px , ${y - 40}px)`;
                     citySelect.textContent = cityes[i].dataset.city;
                     cityLink[i].classList.add('active')
