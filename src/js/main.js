@@ -93,6 +93,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         item.addEventListener('mouseover', (e)=>{
             clearClassActive(liEl, 'active')
             item.classList.add('active')
+            if(document.body.classList.contains('light_section')){
+                header.classList.add('transpar')
+            }
             if(item.querySelector('.menu_el_main')){
                 let el = item.querySelector('.menu_el_main')
                 subMenu.innerHTML = el.outerHTML;
