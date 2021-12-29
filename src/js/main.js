@@ -107,12 +107,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
     //Функция вешает события на элементы меню
     function addlistenerForSubMenu() {
-        let subMenuEl = subMenu.querySelectorAll('.list_link');
 
+        let subMenuEl = subMenu.querySelectorAll('.list_link');
+        //Получение позции первого элемента
+        let posFirstEl = subMenuEl[0].getBoundingClientRect().y;
         subMenuEl.forEach(item=>{
             item.addEventListener('mouseover', ()=>{
                 clearClassActive(subMenuEl, 'active_el', true)
                 item.classList.add('active_el')
+                //Получение позции активного элемента
+                let posEl = item.getBoundingClientRect().y;
+                //Расчет разницы между элементами и присвоение к выпадающему списку для выравнивания выпадающего списка, относительно основного списка
+                let topPosition = posFirstEl - posEl;
+                if(item.firstElementChild != null && !item.parentNode.parentNode.classList.contains('contact')){
+                   let el = item.firstElementChild;
+                   el.style.top = `${topPosition - 15}px`;
+
+                }
             })
         })
     }

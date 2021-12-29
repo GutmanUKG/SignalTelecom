@@ -69,4 +69,99 @@
       color: #7B7781;
     }
   }
+  .sub_menu_list{
+    background: rgb(244, 243, 246);
+    .contact{
+      background: rgb(244, 243, 246);
+
+      .active_el{
+        .contact_txt{
+          .title{
+            color: #000;
+          }
+          .sub_title{
+            color: #000;
+          }
+
+          .adress_block{
+            small{
+              color: #000;
+            }
+            .txt{
+              color: #000;
+            }
+          }
+          .phones{
+            a{
+              color: #000;
+              span{
+                color: #000;
+              }
+            }
+            small{
+              color: #000;
+            }
+            .txt{
+              color: #000;
+            }
+          }
+          .email{
+            a{
+              color: #000;
+              span{
+                color: #000;
+              }
+            }
+            small{
+              color: #000;
+            }
+            .txt{
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+    .menu_el{
+
+      .not_path{
+         li{
+           a{
+             color: #000;
+           }
+         }
+      }
+      ul{
+        li{
+          color: #000;
+
+          .sub_menu_el{
+            li {
+              a{
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer{
+      .phone{
+        a{
+          color: #000;
+          img{
+            filter: invert(1);
+          }
+        }
+      }
+
+      .copy{
+        color: #000;
+      }
+    }
+  }
+  .bg_blur{
+    background: rgba(244, 243, 246,.8);
+  }
 }
