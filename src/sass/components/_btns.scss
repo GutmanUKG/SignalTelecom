@@ -157,4 +157,25 @@
     outline: none;
     margin-top: 40px;
   }
+  &_price{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-decoration: none;
+    background: -webkit-linear-gradient(#554596,#c92c7b);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Proxima Nova',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    &:before{
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("../img/icon_price.svg") center no-repeat;
+    }
+  }
 }
